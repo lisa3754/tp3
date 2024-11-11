@@ -103,8 +103,8 @@ def train_modelE(model, dataset, vocab, num_epochs=10, batch_size=32, learning_r
         print(f'Epoch {epoch + 1}/{num_epochs}, Loss: {avg_loss:.4f}')
 
     # Sauvegarder les paramètres optimisés
-    torch.save(model.state_dict(), 'optimized_model.pth')
-    print("Modèle sauvegardé sous 'optimized_model.pth'")
+    torch.save(model.state_dict(), 'optimized_modelE.pth')
+    print("Modèle sauvegardé sous 'optimized_modelE.pth'")
 
 def load_model(model_path, input_size, output_size):
     model = Model(input_size, output_size)

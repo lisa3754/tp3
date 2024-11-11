@@ -6,9 +6,9 @@ import Vocab as Voczb
 class Model(nn.Module):
     def __init__(self, input_size, output_size):    
         super().__init__()
-        self.W = nn.Linear(input_size, 256)  #input_size = k * dim_embeddings
+        self.W = nn.Linear(input_size, 128)  #input_size = k * dim_embeddings
         self.relu = nn.ReLU()
-        self.U = nn.Linear(256, output_size)
+        self.U = nn.Linear(128, output_size)
         self.softmax = nn.Softmax()
 
     def forward(self, x):
